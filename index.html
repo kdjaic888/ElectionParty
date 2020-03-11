@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>Rezultati izbora</title>
+
+     <body>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <style>
+div {
+    background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+}
+</style>
+
+   <body>
+
+    <style>
+body {
+  background-color: purple;
+}
+</style>
+
+    <div class="container" style="width: 650px; color: purple;">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center"><b>Izbor političke stranke</h1></b>
+        </br>
+          <h3 class="text-center">Rezultati izbora:</h3>
+          <hr/>
+          <br/>
+          <div id="loader">
+            <p class="text-center">Učitavanje...</p>
+          </div>
+          <div id="content" style="display: none;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Id (broj stranke)</th>
+                  <th scope="col">Ime</th>
+                  <th scope="col">Vrsta</th>
+                  <th scope="col">Glas</th>
+                </tr>
+              </thead>
+              <tbody id="candidatesResults">
+              </tbody>
+            </table>
+            <hr/>
+            <form onSubmit="App.castVote(); return false;">
+              <div class="form-group">
+                <label for="candidatesSelect">Odabir stranke</label>
+                <select class="form-control" id="candidatesSelect">
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Daj glas</button>
+              <hr />
+            </form>
+            <p id="accountAddress" class="text-center"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
